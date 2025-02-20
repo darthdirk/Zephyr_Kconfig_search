@@ -45,7 +45,7 @@ def search_kconfig_files(base_dir, parameter):
     """
     matches = []
     pattern = re.compile(re.escape(parameter), re.IGNORECASE)  # Case-insensitive search
-    file_extensions = ["Kconfig", ".conf", ".sysbuild", "CMakeLists.txt"]  # Only Kconfig-related files
+    file_extensions = ["Kconfig", "CMakeLists.txt"]  # Only Kconfig-related files
 
     # Walk through the directory to find matching files
     for root, _, files in os.walk(base_dir):
